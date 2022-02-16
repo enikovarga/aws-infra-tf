@@ -1,5 +1,5 @@
 resource "aws_iam_role" "lambda_role" {
-  name                 = "sqs-lambda-role"
+  name = "sqs-lambda-role"
 
   assume_role_policy = <<EOF
 {

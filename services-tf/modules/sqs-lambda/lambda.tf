@@ -5,15 +5,15 @@ data "archive_file" "sample" {
 }
 
 resource "aws_s3_object" "sample" {
-  bucket = aws_s3_bucket.artifact-bucket.bucket
-  key    = "${var.artifact_path}/hello-world.zip"
-  source = data.archive_file.sample.output_path
+  bucket      = aws_s3_bucket.artifact-bucket.bucket
+  key         = "${var.artifact_path}/hello-world.zip"
+  source      = data.archive_file.sample.output_path
   source_hash = filemd5(data.archive_file.sample.output_path)
 }
 
 resource "aws_lambda_function" "this" {
-  s3_bucket = aws_s3_object.sample.bucket
-  s3_key = aws_s3_object.sample.key
+  s3_bucket        = aws_s3_object.sample.bucket
+  s3_key           = aws_s3_object.sample.key
   source_code_hash = filebase64sha256(data.archive_file.sample.output_path)
 
   function_name = "lambda-function"

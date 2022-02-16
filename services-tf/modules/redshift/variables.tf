@@ -3,7 +3,7 @@ variable "vpc_id" {
 }
 
 variable "environment" {
-  type    = string
+  type = string
 }
 
 variable "master_username" {

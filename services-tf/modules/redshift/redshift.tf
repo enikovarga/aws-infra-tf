@@ -1,12 +1,12 @@
 resource "aws_redshift_cluster" "default" {
   # cluster
-  cluster_identifier = "redshift-cluster"
-  database_name      = "default_db"
-  master_username    = var.master_username
-  master_password    = var.master_password
-  node_type          = "dc2.large"
-  cluster_type       = "multi-node"
-  number_of_nodes    = 1
+  cluster_identifier  = "redshift-cluster"
+  database_name       = "default_db"
+  master_username     = var.master_username
+  master_password     = var.master_password
+  node_type           = "dc2.large"
+  cluster_type        = "multi-node"
+  number_of_nodes     = 1
   skip_final_snapshot = "true"
 
   # network
