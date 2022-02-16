@@ -1,7 +1,7 @@
 resource "aws_redshift_cluster" "default" {
   # cluster
-  cluster_identifier = "redshift-${var.environment}-cluster"
-  database_name      = "default"
+  cluster_identifier = "redshift-cluster"
+  database_name      = "default_db"
   master_username    = var.master_username
   master_password    = var.master_password
   node_type          = "dc2.large"

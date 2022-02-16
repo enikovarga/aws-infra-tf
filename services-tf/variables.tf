@@ -3,17 +3,13 @@ variable "environment" {
 }
 
 # redshift
-#variable "vpc_id" {
-#  type = string
-#}
+variable "master_username" {
+  type = string
+}
 
-#variable "master_username" {
-#  type = string
-#}
-#
-#variable "master_password" {
-#  type = string
-#}
+variable "master_password" {
+  type = string
+}
 
 # sqs-lambda
 variable "artifact_bucket" {

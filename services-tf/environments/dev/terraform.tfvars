@@ -1,9 +1,8 @@
 environment = "dev"
 
 # redshift
-#vpc_id = "vpc-0cc89db478154ce85"
-# master_username = ""
-# master_password = ""
+master_username = "admin"
+master_password = "Abcd12345678"
 
 
 # sqs-lambda
